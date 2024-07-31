@@ -38,7 +38,6 @@ const age = parseInt(prompt("inserisci l'età del passeggero"));
 const basePrice = kilometers * priceKm ;
 
 if (!(age < 18) && !(age >= 65)) {
-    const basePrice = kilometers * priceKm ;
     console.log('il prezzo del biglietto e di:' + ' ' + basePrice + '€');
 } else if (age < 18) {
     const youngPrice = basePrice - ((basePrice * 20) / 100);
