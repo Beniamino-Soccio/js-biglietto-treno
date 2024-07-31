@@ -27,6 +27,9 @@
 // ! FASE DI PREPARAZIONE
 
 const priceKm = 0.21 ;
+const noDiscount = 0 ;
+const youngDiscount = 20 ;
+const seniorDiscount = 40;
 
 // ! FASE DI RACCOLTA DATI
 
@@ -39,16 +42,35 @@ const basePrice = kilometers * priceKm ;
 
 if (!(age < 18) && !(age >= 65)) {
     console.log('il prezzo del biglietto e di:' + ' ' + basePrice + '€');
+    //!bonus
+    const discountElement = document.getElementById('discount');
+    console.log(discountElement);
+    discountElement.innerText = 'Sconto applicato: ' + noDiscount + ' %';
+    const discountticketElement = document.getElementById('discount-ticket');
+    console.log(discountticketElement);
+    discountticketElement.innerText = 'prezzo scontato: ' + basePrice + ' €';
 } else if (age < 18) {
-    const youngPrice = basePrice - ((basePrice * 20) / 100);
+    const youngPrice = basePrice - ((basePrice * youngDiscount) / 100);
     console.log('il prezzo del biglietto e di:' + ' ' + youngPrice + '€');
+    //!bonus
+    const discountElement = document.getElementById('discount');
+    console.log(discountElement);
+    discountElement.innerText = 'Sconto applicato: ' + youngDiscount + ' %';
+    const discountticketElement = document.getElementById('discount-ticket');
+    console.log(discountticketElement);
+    discountticketElement.innerText = 'prezzo scontato: ' + youngPrice + ' €';
 } else {
-    const seniorPrice = basePrice - ((basePrice * 40) / 100);
+    const seniorPrice = basePrice - ((basePrice * seniorDiscount) / 100);
     console.log('il prezzo del biglietto e di:' + ' ' + seniorPrice + '€');
+    //!bonus
+    const discountElement = document.getElementById('discount');
+    console.log(discountElement);
+    discountElement.innerText = 'Sconto applicato: ' + seniorDiscount + ' %';
+    const discountticketElement = document.getElementById('discount-ticket');
+    console.log(discountticketElement);
+    discountticketElement.innerText = 'prezzo scontato: ' + seniorPrice + ' €';
 }
-
-// ! BONUS
-
+//!bonus
 //recupero gli elementi che mi interessano dal DOM
 const ageElement = document.getElementById('user-age');
 console.log(ageElement);
@@ -59,6 +81,10 @@ console.log(kmElement);
 const priceticketElement = document.getElementById('price-ticket');
 console.log(priceticketElement);
 
-const discountticketElement = document.getElementById('discount-ticket');
-console.log(discountticketElement);
+//stampo i risultati nell'elemento interessato del DOM
+ageElement.innerText = 'Età: ' + age + ' anni';
+
+kmElement.innerText = 'lunghezza tragitto: ' + kilometers + ' km';
+
+priceticketElement.innerText = 'prezzo base ticket: ' + basePrice + ' €';
 
