@@ -7,13 +7,21 @@
 // Aggiungere, sempre in pagina, altre informazioni, come il prezzo prima dello sconto e l'età e il chilometraggio indicati dall'utente
 //Abbellire col CSS
 
-//ANALISI TRACCIA "base"
+//ANALISI TRACCIA BASE
 /*
 1.preparo eventuali variabili da tenere in considerazione fin da subito
 2.chiedere all'utente i chilometri da percorrere e l'età del passeggero
 3.calcolare il prezzo del viaggio
 4.applicare gli eventuali sconti
 5.stampare in console il prezzo
+*/
+//ANALISI TRACCIA BONUS
+/*
+1.Recuperare gli elementi che mi interessano dal DOM
+2.stampo il numero di km inseriti dall'utente nell'elemento interessato del DOM
+3.stampo l'età inserita dall'utente nell'elemento interessato del DOM
+4.stampo il prezzo del biglietto eventualmente senza sconto nell'elemento interessato del DOM
+5.stampo il prezzo eventualmente scontato nell'elemento del DOM interessato
 */
 
 // ! FASE DI PREPARAZIONE
@@ -39,3 +47,6 @@ if (!(age < 18) && !(age >= 65)) {
     const seniorPrice = basePrice - ((basePrice * 40) / 100);
     console.log('il prezzo del biglietto e di:' + ' ' + seniorPrice + '€');
 }
+
+// ! BONUS
+
