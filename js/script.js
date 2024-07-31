@@ -26,3 +26,6 @@ const kilometers = parseInt(prompt('inserisci il numero di chilometri da percorr
 const age = parseInt(prompt("inserisci l'età del passeggero"));
 
 // ! FASE DI ELABORAZIONE
+
+const basePrice = kilometers * priceKm ;
+console.log(basePrice);
