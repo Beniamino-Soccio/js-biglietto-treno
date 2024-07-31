@@ -50,3 +50,16 @@ if (!(age < 18) && !(age >= 65)) {
 
 // ! BONUS
 
+//recupero gli elementi che mi interessano dal DOM
+const ageElement = document.getElementById('user-age');
+console.log(ageElement);
+
+const kmElement = document.getElementById('km');
+console.log(kmElement);
+
+const priceticketElement = document.getElementById('price-ticket');
+console.log(priceticketElement);
+
+const discountticketElement = document.getElementById('discount-ticket');
+console.log(discountticketElement);
+
