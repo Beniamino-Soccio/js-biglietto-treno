@@ -19,6 +19,7 @@
 // ! FASE DI PREPARAZIONE
 
 const priceKm = 0.21 ;
+const basePrice = kilometers * priceKm ;
 
 // ! FASE DI RACCOLTA DATI
 
@@ -27,5 +28,14 @@ const age = parseInt(prompt("inserisci l'età del passeggero"));
 
 // ! FASE DI ELABORAZIONE
 
-const basePrice = kilometers * priceKm ;
-console.log(basePrice);
+//calcolo sconto per i minorenni( se l'età e < di 18 allora faccio il 20% altrimenti se vedo che è > di 65 faccio il 40%)
+if (!(age < 18) && !(age >= 65)) {
+    const basePrice = kilometers * priceKm ;
+    console.log('il prezzo del biglietto e di:' + ' ' + basePrice + '€');
+} else if (age < 18) {
+    const youngPrice = basePrice - ((basePrice * 20) / 100);
+    console.log('il prezzo del biglietto e di:' + ' ' + youngPrice + '€');
+} else {
+    const seniorPrice = basePrice - ((basePrice * 40) / 100);
+    console.log('il prezzo del biglietto e di:' + ' ' + seniorPrice + '€');
+}
